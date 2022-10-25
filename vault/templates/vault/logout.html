@@ -4,12 +4,8 @@
     <link rel="stylesheet" href="{% static 'vault/auth.css' %}">
 {% endblock %}
 {% block content %}
-    <div class="container">
-        <h2>You have been logged out</h2>
-        <div class="border-top pt-3">
-            <small class="text-muted">
-                <a href="{% url 'login' %}">Log In Again</a>
-            </small>
-        </div>
+    <div class="container w-50 bg-primary rounded">
+        <h1>Successfully Logout</h1>
+        <h2><a href="/">Back To Home</a></h2>
     </div>
  {% endblock %}
