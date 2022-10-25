@@ -1,0 +1,86 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,400;1,600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a:link, a:active, a:visited, a:hover{
+  color: aqua;
+  text-decoration: none;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+}
+
+div.content-container {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  min-width: 100vw;
+}
+
+nav.nav-container {
+  display: flex;
+  background-color: #ba5af2;
+  justify-content: space-around;
+  align-items: center;
+}
+
+a#brand {
+  color: #009879;
+  font-weight: 900;
+  font-size: 2em;
+
+}
+
+
+table {
+border-collapse: collapse;
+width: 800px;
+height: 200px;
+border: 1px solid #eee;
+box-shadow: 2px 2px 12px rgba(0, 0, 0, .5);
+margin: 0 1em;
+width: 80%;
+}
+table tr:nth-child(odd){
+background: #009879;
+}
+tr {
+transition: all .2s ease-in;
+cursor: pointer;
+border-bottom: 1px solid #ddd;
+}
+table tr:nth-child(odd):hover{
+background: #f1f1f1;
+color: #16a085;
+}
+
+#header {
+  background: #16a085;
+  color: #fff
+
+}
+tr:hover {
+background: #f1f1f1;
+color: #009879;
+transform: scale(1.2);
+}
+th, td{
+text-align: left;
+padding: 12px;
+border-bottom: 1px solid #ddd;
+
+}
+tr th {
+  font-family: 'Montserrat', sans-serif;
+}
+@media only screen and (max-width :568px){
+table {
+  width: 90%;
+}
+}
+
