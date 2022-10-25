@@ -1,0 +1,18 @@
+{% extends 'vault/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="container w-50">
+
+        <form action="" method="post" class="container-fluid">
+            {% csrf_token %}
+        <fieldset class="p-3">
+
+            <legend class="h2 text-secondary px-2">Confirm Action</legend>
+            {{ form|crispy}}
+            <button type="submit" class="btn btn-danger h2">Delete this account?</button>
+        </fieldset>
+    </form>
+
+        </div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'vault/base.html'%}
+{% load static %}
+
+  {% block css%}
+  <link rel="stylesheet" href="{% static 'vault/home.css' %}">
+  {% endblock %}
+  {% block content %}
+
+
+<header class="sticky-top">
+  <nav class="nav-container p-2">
+    <a class="navbar-brand fw-bolder"  id="brand"href="/">PyVault</a>
+    <ul class="navbar-nav  list-group list-group-horizontal">
+      <li class="nav-item active"><a href="{% url 'add' %} pr-2">Add Account</a> </li>
+      <li class="nav-item active  pl-2"><a href="{% url 'logout'%}" class="pl-2">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+      
+
+
+      <main>
+
+        <div class="content-container">
+          
+          <table>
+        <tr id="header">
+            <th>Account</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th></th>
+            <th></th>
+
+        {% for item in vault %}
+        <tr>
+            <td>{{ item.account }}</td>
+            <td>{{ item.username }}</td>
+            <td>{{ item.email }}</td>
+            <td>{{ item.password }}</td>
+            {% if item %}
+            <td><a href="{% url 'update_acc' item.id%}" >Update</a></td>
+            <td><a href="{% url 'delete_acc' item.id%}" >Delete</a></td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+        
+    </table>
+</div>
+</main>
+    {% endblock %}
